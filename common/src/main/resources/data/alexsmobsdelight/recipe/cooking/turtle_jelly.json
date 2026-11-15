@@ -1,0 +1,30 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "id": "minecraft:bowl"
+  },
+  "cookingtime": 400,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "alexsmobsdelight:turtle_shells"
+    },
+    {
+      "item": "minecraft:honey_bottle"
+    },
+    {
+      "item": "minecraft:dandelion"
+    },
+    {
+      "item": "minecraft:charcoal"
+    },
+    {
+      "item": "minecraft:slime_ball"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "alexsmobsdelight:turtle_jelly",
+    "count": 2
+  }
+}

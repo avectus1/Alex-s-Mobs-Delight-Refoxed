@@ -1,0 +1,26 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "id": "minecraft:bucket"
+  },
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "alexsmobsdelight:raw_flying_fish"
+    },
+    {
+      "tag": "alexsmobsdelight:raw_flying_fish"
+    },
+    {
+      "tag": "alexsmobsdelight:raw_flying_fish"
+    },
+    {
+      "item": "alexsmobs:stink_bottle"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "id": "alexsmobsdelight:surflygfisk"
+  }
+}
