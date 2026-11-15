@@ -5,10 +5,10 @@ license = "LGPL-3.0-only"
 [[mods]]
 modId = "alexsmobsdelight"
 version = "${version}"
-displayName = "Alex's Mobs Delight"
-authors = "FromtheArakiel"
+displayName = "Alex's Mobs Delight Refoxed"
+authors = "FromtheArakiel (NeoForge port), BF_Meow (original mod)"
 description = '''
-Farmer's Delight compat for Alex's Mobs, vanilla style.
+Farmer's Delight compat for Alex's Mobs Neo, vanilla style.
 '''
 logoFile = "assets/alexsmobsdelight/icon.png"
 
@@ -46,7 +46,14 @@ side = "BOTH"
 [[dependencies.alexsmobsdelight]]
 modId = "alexsmobs"
 type = "required"
-versionRange = "[1.0,)"
+versionRange = "[1.22,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.alexsmobsdelight]]
+modId = "citadel"
+type = "required"
+versionRange = "[2.7,)"
 ordering = "AFTER"
 side = "BOTH"
 

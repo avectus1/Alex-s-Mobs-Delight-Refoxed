@@ -10,11 +10,19 @@ dependencies {
     // Architectury API provides the cross platform registry and event helpers.
     modImplementation "dev.architectury:architectury:$rootProject.architectury_api_version"
 
-    // Content mods. The Fabric builds are used for common compilation; both
-    // platforms expose the same class and field names, so the compiled common
-    // code links against the NeoForge builds as well. The jars are local, so the
-    // build never needs a remote repository for them.
-    modCompileOnly files(rootProject.file('libs/alexsmobs-2.2.2-fabric+1.21.1.jar'))
+    // Alex's Mobs Neo and the real Citadel (NeoForge only, Mojang-mapped), so they
+    // are plain compile-only jars rather than remapped mod jars. Alex's Mobs Neo
+    // uses the real Citadel instead of a bundled copy, which is what makes this
+    // fork run on it. The jars are local, so the build never needs a remote
+    // repository for them.
+    compileOnly files(rootProject.file('libs/alexsmobs-1.22.9.jar'))
+    compileOnly files(rootProject.file('libs/citadel-2.7.1-1.21.1.jar'))
+    // Alex's Mobs Neo exposes its registry entries as NeoForge DeferredHolders, so
+    // the shared code needs NeoForge's API classes to compile against them.
+    compileOnly "net.neoforged:neoforge:$rootProject.neoforge_version:universal"
+
+    // Farmer's Delight: the Fabric build is used for common compilation; both
+    // platforms expose the same class and field names.
     modCompileOnly files(rootProject.file('libs/FarmersDelight-1.21.1-3.3.6+refabricated.jar'))
 
     // JEI is an optional integration: only the Fabric build is needed here to

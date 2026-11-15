@@ -90,7 +90,7 @@ public class SuperSeagullAIStealFromPlayers extends Goal {
                     this.seagull.level().addFreshEntity(mosquito);
 
                     if (this.target instanceof ServerPlayer) {
-                        AMAdvancementTriggerRegistry.SEAGULL_STEAL.trigger((ServerPlayer)this.target);
+                        AMAdvancementTriggerRegistry.SEAGULL_STEAL.get().trigger((ServerPlayer)this.target);
                     }
                 } else {
                     this.stop();

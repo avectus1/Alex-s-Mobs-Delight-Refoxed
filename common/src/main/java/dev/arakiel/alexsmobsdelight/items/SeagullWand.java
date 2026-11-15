@@ -111,7 +111,7 @@ public class SeagullWand extends HoeItem {
             player.drop(copy, false);
         }
         if (target instanceof ServerPlayer serverPlayer) {
-            AMAdvancementTriggerRegistry.SEAGULL_STEAL.trigger(serverPlayer);
+            AMAdvancementTriggerRegistry.SEAGULL_STEAL.get().trigger(serverPlayer);
         }
     }
 

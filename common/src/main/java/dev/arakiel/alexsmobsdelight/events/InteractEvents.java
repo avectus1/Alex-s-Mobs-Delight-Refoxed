@@ -128,7 +128,7 @@ public final class InteractEvents {
             }
             consumeHeld(player, held);
         }
-        if (held.is(Items.CAKE) && player.hasEffect(AMDHolders.effect(AMEffectRegistry.TIGERS_BLESSING.get()))
+        if (held.is(Items.CAKE) && player.hasEffect(AMDHolders.effect(AMEffectRegistry.TIGERS_BLESSING.value()))
                 && target instanceof EntityTiger tiger) {
             if (level instanceof ServerLevel serverLevel) {
                 serverLevel.sendParticles(ParticleTypes.HAPPY_VILLAGER, tiger.getX(), tiger.getY(), tiger.getZ(),

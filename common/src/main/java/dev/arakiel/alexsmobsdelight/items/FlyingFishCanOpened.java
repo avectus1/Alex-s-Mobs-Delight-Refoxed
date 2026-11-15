@@ -65,7 +65,7 @@ public class FlyingFishCanOpened extends ConsumableItem {
             }
             if(entity instanceof LivingEntity living){
                 living.addEffect(new MobEffectInstance(AMDHolders.effect(EffectRegistry.SEAGULL_ANOREXIA), 80, 0));
-                living.addEffect(new MobEffectInstance(AMDHolders.effect(AMEffectRegistry.MOSQUITO_REPELLENT.get()), 80, 0));
+                living.addEffect(new MobEffectInstance(AMDHolders.effect(AMEffectRegistry.MOSQUITO_REPELLENT.value()), 80, 0));
             }
         }
     }

@@ -113,7 +113,7 @@ public final class CombatEvents {
         }
         if (attacker.hasEffect(AMDHolders.effect(EffectRegistry.CROCODILE_SHARPNESS))) {
             int amplifier = attacker.getEffect(AMDHolders.effect(EffectRegistry.CROCODILE_SHARPNESS)).getAmplifier();
-            target.addEffect(new MobEffectInstance(AMDHolders.effect(AMEffectRegistry.EXSANGUINATION.get()),
+            target.addEffect(new MobEffectInstance(AMDHolders.effect(AMEffectRegistry.EXSANGUINATION.value()),
                     100, amplifier));
         }
         if (attacker.hasEffect(AMDHolders.effect(EffectRegistry.POISON_FANGS))) {
