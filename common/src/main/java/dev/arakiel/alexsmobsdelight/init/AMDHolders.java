@@ -5,6 +5,7 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
 
 /**
@@ -25,6 +26,20 @@ public final class AMDHolders {
 
     public static Holder<MobEffect> effect(MobEffect effect) {
         return BuiltInRegistries.MOB_EFFECT.wrapAsHolder(effect);
+    }
+
+    /**
+     * Resolves one of Alex's Mobs' effects by its registry name, e.g. {@code amEffect("fear")}.
+     *
+     * <p>Looked up by name instead of through {@code AMEffectRegistry}'s fields, because the
+     * 1.21.1 ports of Alex's Mobs declare those fields with different types (Alex's Mobs Neo uses
+     * {@code Holder}, the Unofficial Port uses {@code DeferredHolder}). Linking against either
+     * type crashes on the other port with a {@code NoSuchFieldError}; the registry name is the
+     * same in both.</p>
+     */
+    public static Holder<MobEffect> amEffect(String name) {
+        return BuiltInRegistries.MOB_EFFECT.getHolderOrThrow(ResourceKey.create(Registries.MOB_EFFECT,
+                ResourceLocation.fromNamespaceAndPath("alexsmobs", name)));
     }
 
     /** Resolves the registry reference of one of our own deferred effects. */

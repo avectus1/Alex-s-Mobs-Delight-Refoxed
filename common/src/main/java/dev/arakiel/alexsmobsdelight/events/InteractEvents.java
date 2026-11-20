@@ -3,7 +3,6 @@ package dev.arakiel.alexsmobsdelight.events;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.github.alexthe666.alexsmobs.effect.AMEffectRegistry;
 import com.github.alexthe666.alexsmobs.entity.AMEntityRegistry;
 import com.github.alexthe666.alexsmobs.entity.EntityGrizzlyBear;
 import com.github.alexthe666.alexsmobs.entity.EntityOrca;
@@ -128,7 +127,7 @@ public final class InteractEvents {
             }
             consumeHeld(player, held);
         }
-        if (held.is(Items.CAKE) && player.hasEffect(AMDHolders.effect(AMEffectRegistry.TIGERS_BLESSING.value()))
+        if (held.is(Items.CAKE) && player.hasEffect(AMDHolders.amEffect("tigers_blessing"))
                 && target instanceof EntityTiger tiger) {
             if (level instanceof ServerLevel serverLevel) {
                 serverLevel.sendParticles(ParticleTypes.HAPPY_VILLAGER, tiger.getX(), tiger.getY(), tiger.getZ(),

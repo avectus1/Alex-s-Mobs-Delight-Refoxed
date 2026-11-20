@@ -1,7 +1,6 @@
 package dev.arakiel.alexsmobsdelight.items;
 
 import com.github.alexthe666.alexsmobs.client.particle.AMParticleRegistry;
-import com.github.alexthe666.alexsmobs.effect.AMEffectRegistry;
 import com.github.alexthe666.alexsmobs.entity.EntityCrimsonMosquito;
 import com.github.alexthe666.alexsmobs.entity.EntityRaccoon;
 import com.github.alexthe666.alexsmobs.entity.EntitySeagull;
@@ -65,7 +64,7 @@ public class FlyingFishCanOpened extends ConsumableItem {
             }
             if(entity instanceof LivingEntity living){
                 living.addEffect(new MobEffectInstance(AMDHolders.effect(EffectRegistry.SEAGULL_ANOREXIA), 80, 0));
-                living.addEffect(new MobEffectInstance(AMDHolders.effect(AMEffectRegistry.MOSQUITO_REPELLENT.value()), 80, 0));
+                living.addEffect(new MobEffectInstance(AMDHolders.amEffect("mosquito_repellent"), 80, 0));
             }
         }
     }

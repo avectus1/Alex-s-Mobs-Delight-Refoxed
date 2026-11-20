@@ -3,7 +3,6 @@ package dev.arakiel.alexsmobsdelight.events;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.github.alexthe666.alexsmobs.effect.AMEffectRegistry;
 import com.github.alexthe666.alexsmobs.entity.EntityFroststalker;
 import com.github.alexthe666.alexsmobs.entity.EntityTarantulaHawk;
 import com.github.alexthe666.alexsmobs.misc.AMSoundRegistry;
@@ -113,7 +112,7 @@ public final class CombatEvents {
         }
         if (attacker.hasEffect(AMDHolders.effect(EffectRegistry.CROCODILE_SHARPNESS))) {
             int amplifier = attacker.getEffect(AMDHolders.effect(EffectRegistry.CROCODILE_SHARPNESS)).getAmplifier();
-            target.addEffect(new MobEffectInstance(AMDHolders.effect(AMEffectRegistry.EXSANGUINATION.value()),
+            target.addEffect(new MobEffectInstance(AMDHolders.amEffect("exsanguination"),
                     100, amplifier));
         }
         if (attacker.hasEffect(AMDHolders.effect(EffectRegistry.POISON_FANGS))) {
